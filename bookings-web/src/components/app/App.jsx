@@ -29,7 +29,12 @@ export default function App() {
           render={(routerProps) => <SignupPage {...routerProps} />}
         />
         <Route
-          path="/getaways"
+          path="/places"
+          exact
+          render={(routerProps) => <Getaways {...routerProps} />}
+        />
+        <Route
+          path=":id"
           exact
           render={(routerProps) => <Getaways {...routerProps} />}
         />
