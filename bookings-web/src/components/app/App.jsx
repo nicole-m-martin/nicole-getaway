@@ -28,6 +28,11 @@ export default function App() {
           exact
           render={(routerProps) => <SignupPage {...routerProps} />}
         />
+        <Route
+          path="/getaways"
+          exact
+          render={(routerProps) => <Getaways {...routerProps} />}
+        />
       </Router>
     </div>
   );
