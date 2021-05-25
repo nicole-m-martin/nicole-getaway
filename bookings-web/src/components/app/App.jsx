@@ -1,4 +1,5 @@
 import React from 'react';
+import '../app/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Getaways from '../../containers/Getaways';
 import Header from '../ui/Header';

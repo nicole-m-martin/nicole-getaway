@@ -12,22 +12,20 @@ const PlaceDetails = ({
   petFriendly,
   pool,
   wifi,
-}) => {
-  return (
-    <ul>
-      <li>{name}</li>
-      <li>{description}</li>
-      <li>{location}</li>
-      <li>{pricePerNight}</li>
-      <li>{image}</li>
-      <li>{imageThumbnail}</li>
-      <li>{maxGuests}</li>
-      <li>{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</li>
-      {pool ? <li>Has a Pool!</li> : null}
-      {wifi ? <li>Free Wifi</li> : null}
-    </ul>
-  );
-};
+}) => (
+  <ul>
+    <li>{name}</li>
+    <li>{description}</li>
+    <li>{location}</li>
+    <li>{pricePerNight}</li>
+    <li>{image}</li>
+    <li>{imageThumbnail}</li>
+    <li>{maxGuests}</li>
+    <li>{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</li>
+    {pool ? <li>Has a Pool!</li> : null}
+    {wifi ? <li>Free Wifi</li> : null}
+  </ul>
+);
 
 Place.propTypes = {
   name: PropTypes.string.isRequired,

@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import PlaceDetails from '../components/places/PlaceDetails';
 import { getDetails } from '../services/placesApi';
+import { useParams } from 'react-router-dom';
 
 const Getaways = () => {
-  const [place, setPlace] = useState([]);
+  const [place, setPlace] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const { id } = useParams();
+
   useEffect(() => {
-    getDetails()
-      .then(setPlace)
+    getDetails(id)
+      .then((place) => setPlace(place))
       .finally(() => setLoading(false));
   }, []);
 
@@ -16,7 +19,7 @@ const Getaways = () => {
     <h2>loading....</h2>
   ) : (
     <main>
-      <PlaceDetails {...place} />
+      <PlaceDetails place={...place} />
     </main>
   );
 };

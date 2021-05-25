@@ -10,16 +10,19 @@ export const allPlaces = (places) => {
 };
 
 export const onePlace = (places) => {
-  return {
-    name,
-    description,
-    location,
-    pricePerNight,
-    image,
-    imageThumbnail,
-    maxGuests,
-    petFriendly,
-    pool,
-    wifi,
-  };
+  const responseData = places.map((place) => {
+    return {
+      name: place.name,
+      description: place.description,
+      location: place.location,
+      pricePerNight: place.pricePerNight,
+      image: place.image,
+      imageThumbnail: place.imageThumbnail,
+      maxGuests: place.maxGuests,
+      petFriendly: place.petFriendly,
+      pool: place.pool,
+      wifi: place.wifi,
+    };
+  });
+  return responseData;
 };
