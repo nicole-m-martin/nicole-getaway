@@ -12,6 +12,7 @@ PlaceList.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      imageThumbnail: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

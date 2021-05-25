@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import PlaceDetails from '../components/places/PlaceDetails';
 import { getDetails } from '../services/placesApi';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
-const Getaways = () => {
+const GetawaysDetail = (props) => {
   const [place, setPlace] = useState(null);
   const [loading, setLoading] = useState(true);
+  
 
-  const { id } = useParams();
+  // const { id } = useParams();
 
   useEffect(() => {
-    getDetails(id)
-      .then((place) => setPlace(place))
+    getDetails(props.match.params.id)
+      .then(setPlace)
       .finally(() => setLoading(false));
   }, []);
 
@@ -24,4 +25,4 @@ const Getaways = () => {
   );
 };
 
-export default Getaways;
+export default GetawaysDetail;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PlaceDetails = ({
+  id,
   name,
   description,
   location,
@@ -13,7 +14,7 @@ const PlaceDetails = ({
   pool,
   wifi,
 }) => (
-  <ul>
+  <ul key={id}>
     <li>{name}</li>
     <li>{description}</li>
     <li>{location}</li>
