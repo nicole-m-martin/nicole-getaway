@@ -12,14 +12,7 @@ PlaceList.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      location: PropTypes.string.isRequired,
-      pricePerNight: PropTypes.number.isRequired,
-      image: PropTypes.string.isRequired,
       imageThumbnail: PropTypes.string.isRequired,
-      maxGuests: PropTypes.number.isRequired,
-      petFriendly: PropTypes.bool.isRequired,
-      pool: PropTypes.bool.isRequired,
-      wifi: PropTypes.bool.isRequired,
     })
   ).isRequired,
 };
